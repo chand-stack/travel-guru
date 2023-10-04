@@ -1,0 +1,27 @@
+[
+    {
+      "name": "COX'S BAZAR",
+      "details": "Longest natural sandy sea beach, breathtaking views, vibrant local culture, and water sports galore.",
+      "img": "https://i.ibb.co/tKfjvXz/Rectangle-1.png",
+      "id": 1
+    },
+    {
+      "name": "SREEMANGAL",
+      "details": "Tea capital of Bangladesh', beautiful tea gardens, refreshing climate, and diverse wildlife.",
+      "img": "https://i.ibb.co/dBx3Rys/Sreemongol.png",
+      "id": 2
+    },
+    {
+      "name": "SUNDARBAN",
+      "details": "World's largest mangrove forest, rich biodiversity, Bengal tigers, and unique ecosystem where rivers meet the sea.",
+      "img": "https://i.ibb.co/H4sQ6BQ/sundorbon.png",
+      "id": 3
+    },
+    {
+      "name": "SAJEK",
+      "details": "Serene hill station, lush green hills, tribal culture, and panoramic views of clouds kissing the hills.",
+      "img": "https://i.ibb.co/1mG6jDx/Sajek.png",
+      "id": 4
+    }
+  ]
+  
