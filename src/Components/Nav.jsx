@@ -1,13 +1,14 @@
 import { Link } from 'react-router-dom';
-import logo from '../assets/Frame.png'
+import logo from '../assets/frametwo.png'
 import { ImMenu } from 'react-icons/im';
-const Header = () => {
+
+const Nav = () => {
     return (
         <>
-        <div className='hidden lg:contents bg-transparent text-white'>
+        <div className='hidden lg:contents bg-transparent text-black'>
         <div className='flex justify-around items-center bg-transparent py-4 '>
-          <Link to="/">  <img src={logo} alt="" /></Link>
-            <input type="text" placeholder="Search Your Destination" className="input input-bordered border-white w-full max-w-xs bg-white bg-opacity-25 text-white" />
+           <Link to="/"> <img className='flex-grow-0' src={logo} alt="" /></Link>
+            
 
             
             <Link>News</Link>
@@ -19,12 +20,12 @@ const Header = () => {
         </div>
         </div>
 
-        <div className='lg:hidden bg-transparent text-white'>
+        <div className='lg:hidden bg-transparent text-black'>
 
 
-        <div className='flex gap-5 bg-transparent md:gap-10 px-3 items-center py-4'>
-          <Link to="/">  <img className='flex-1' src={logo} alt="" /></Link>
-            <input type="text" placeholder="Search Your Destination" className="input input-bordered w-full max-w-xs bg-white bg-opacity-25 border-white text-white" />
+        <div className='flex gap-12 bg-transparent md:gap-28 flex-row-reverse px-3 items-center py-4'>
+           <Link to="/"> <img className='' src={logo} alt="" /></Link>
+           
           
             <button className='btn btn-sm bg-yellow-400 text-black border-none'><Link to="/login">Login</Link></button>
 
@@ -52,4 +53,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default Nav;

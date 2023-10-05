@@ -3,25 +3,29 @@
       "name": "COX'S BAZAR",
       "details": "Longest natural sandy sea beach, breathtaking views, vibrant local culture, and water sports galore.",
       "img": "https://i.ibb.co/tKfjvXz/Rectangle-1.png",
-      "id": 1
+      "id": 1,
+      "info": "Cox's Bazar, often referred to as the Queen of Beaches, is a picturesque coastal town located in southeastern Bangladesh. It boasts the world's longest natural sandy sea beach, stretching over 120 kilometers along the Bay of Bengal. Tourists flock to Cox's Bazar to enjoy the stunning sunset views, vibrant beach life, and delicious seafood."
     },
     {
       "name": "SREEMANGAL",
       "details": "Tea capital of Bangladesh', beautiful tea gardens, refreshing climate, and diverse wildlife.",
-      "img": "https://i.ibb.co/dBx3Rys/Sreemongol.png",
-      "id": 2
+      "img": "https://i.ibb.co/H7GrrnC/imagesree.jpg",
+      "id": 2,
+      "info": "Sreemangal, often called the Tea Capital of Bangladesh, is nestled in the Sylhet Division and renowned for its vast tea gardens and aromatic tea estates. Visitors can take guided tours of the tea estates, witness the tea-making process, and enjoy the serene ambiance of the region. Sreemangal also boasts lush rainforests, serene lakes, and is a haven for birdwatching and nature enthusiasts."
     },
     {
       "name": "SUNDARBAN",
       "details": "World's largest mangrove forest, rich biodiversity, Bengal tigers, and unique ecosystem where rivers meet the sea.",
-      "img": "https://i.ibb.co/H4sQ6BQ/sundorbon.png",
-      "id": 3
+      "img": "https://i.ibb.co/cwvZN67/majestic-bengal.jpg",
+      "id": 3,
+      "info": "Sundarbans, the largest mangrove forest in the world, is a UNESCO World Heritage Site situated in the delta region of the Padma, Meghna, and Brahmaputra river basins. This unique ecosystem is home to the Bengal tiger, various species of birds, crocodiles, and other wildlife. Tourists visit to explore its dense mangrove forests, embark on boat safaris, and experience the awe-inspiring biodiversity."
     },
     {
       "name": "SAJEK",
       "details": "Serene hill station, lush green hills, tribal culture, and panoramic views of clouds kissing the hills.",
       "img": "https://i.ibb.co/1mG6jDx/Sajek.png",
-      "id": 4
+      "id": 4,
+      "info": "Sajek Valley is a breathtaking hill station in the Chittagong Hill Tracts of Bangladesh, offering visitors a serene retreat amidst lush green hills, valleys, and tribal villages. It's known for its misty landscapes, panoramic views, and diverse indigenous cultures. Travelers can indulge in trekking, adventure sports, and cultural experiences with the local communities."
     }
   ]
   

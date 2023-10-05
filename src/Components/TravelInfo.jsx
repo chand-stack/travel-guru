@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 import Header from "./Header";
 
 const TravelInfo = () => {
@@ -23,7 +23,7 @@ const TravelInfo = () => {
 
                 <div className="px-5">
                 <h1 className="text-4xl lg:text-8xl md:text-5xl font-medium text-white">{travel.name}</h1>
-                <p className="text-white text-2xl font-medium">{travel.details}</p>
+                <p className="text-white text-2xl font-medium">{travel?.info}</p>
             </div>
 
             <div>
@@ -50,7 +50,7 @@ const TravelInfo = () => {
           </label>
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary bg-yellow-400 border-none text-black">Start Booking</button>
+          <Link to="/hotel"><button className="btn btn-primary bg-yellow-400 border-none text-black">Start Booking</button></Link>
         </div>
       </form>
     </div>
