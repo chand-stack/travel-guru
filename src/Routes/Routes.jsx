@@ -5,6 +5,7 @@ import TravelInfo from "../Components/TravelInfo";
 import Login from "../Components/Login";
 import Register from "../Components/Register";
 import Hotel from "../Components/Hotel";
+import PrivateRoute from "../Private/PrivateRoute";
 
 
 const routes = createBrowserRouter([
@@ -32,7 +33,7 @@ const routes = createBrowserRouter([
             },
             {
                 path:"/hotel",
-                element:<Hotel/>
+                element:<PrivateRoute><Hotel/></PrivateRoute>
             }
         ]
     }

@@ -1,8 +1,22 @@
 import { Link } from 'react-router-dom';
 import logo from '../assets/frametwo.png'
 import { ImMenu } from 'react-icons/im';
+import { useContext } from 'react';
+import { AuthContext } from '../AuthProvider/AuthProvider';
 
 const Nav = () => {
+  const {user,logOutUser} = useContext(AuthContext)
+
+  const handleLogout = () => {
+    logOutUser()
+    .then(()=>{
+    console.log('log out')  
+    })
+    .catch(error => {
+      console.log(error)
+    })
+  }
+
     return (
         <>
         <div className='hidden lg:contents bg-transparent text-black'>
@@ -16,7 +30,14 @@ const Nav = () => {
             <Link>Blog</Link>
             <Link>Contact</Link>
           
-            <button className='btn btn-sm bg-yellow-400 border-none text-black'><Link to="/login">Login</Link></button>
+            {
+            user ? <details className="dropdown ">
+            <summary className="m-1 btn bg-transparent border-none text-black hover:bg-transparent">{user.displayName}</summary>
+            <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-full">
+              <li onClick={handleLogout} className='text-black btn text-center font-bold'>Log Out</li>
+            </ul>
+          </details> : <button className='btn btn-sm bg-yellow-400 border-none text-black'><Link to="/login">Login</Link></button>
+          }
         </div>
         </div>
 
@@ -27,7 +48,14 @@ const Nav = () => {
            <Link to="/"> <img className='' src={logo} alt="" /></Link>
            
           
-            <button className='btn btn-sm bg-yellow-400 text-black border-none'><Link to="/login">Login</Link></button>
+           {
+            user ? <details className="dropdown ">
+            <summary className="m-1 btn bg-transparent border-none text-black hover:bg-transparent">{user.displayName}</summary>
+            <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-full">
+              <li onClick={handleLogout} className='text-black btn text-center font-bold'>Log Out</li>
+            </ul>
+          </details> : <button className='btn btn-sm bg-yellow-400 border-none text-black'><Link to="/login">Login</Link></button>
+          }
 
             <div className="drawer flex-1">
   <input id="my-drawer" type="checkbox" className="drawer-toggle" />

@@ -1,21 +1,22 @@
 import Nav from "./Nav";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineLine } from 'react-icons/ai';
 import { BsFacebook } from 'react-icons/bs';
 import { FcGoogle } from 'react-icons/fc';
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+
 const Register = () => {
-    const {createUser,userDetail} = useContext(AuthContext)
+    const {createUser,userDetail,googleLogin} = useContext(AuthContext)
    
+    const navigate = useNavigate()
+
 const registerHandler = e =>{
     e.preventDefault()
     const email = e.target.email.value 
     const password = e.target.password.value 
     const firstName = e.target.fname.value 
     const lastName = e.target.lname.value 
-    
-    
 
     createUser(email,password)
     .then(result => {
@@ -23,11 +24,23 @@ const registerHandler = e =>{
         .then(()=>{console.log('updated')})
         .catch(error => {console.log(error)})
         console.log(result.user)
+        e.target.reset()
+        navigate("/")
     })
     .catch(error => {
         console.log(error)
     })
     
+}
+
+const googleHandler = () => {
+  googleLogin()
+  .then(result => {
+    console.log(result.user)
+  })
+  .catch(error => {
+    console.log(error)
+  })
 }
 
     return (
@@ -91,7 +104,7 @@ const registerHandler = e =>{
     <button className="font-semibold w-1/3 rounded-full btn-outline border-gray-300 btn text-xl flex items-center gap-2"><BsFacebook className="text-4xl text-sky-500"/><span className="px-10 flex-1">Continue With Facebook</span></button>
 </div>
 <div className="flex justify-center">
-    <button className="font-semibold w-1/3 rounded-full btn-outline border-gray-300 btn text-xl flex items-center gap-2"><FcGoogle className="text-4xl"/><span className="px-10 flex-1">Continue With Google</span></button>
+    <button onClick={googleHandler} className="font-semibold w-1/3 rounded-full btn-outline border-gray-300 btn text-xl flex items-center gap-2"><FcGoogle className="text-4xl"/><span className="px-10 flex-1">Continue With Google</span></button>
 </div>
         </div>
     );
